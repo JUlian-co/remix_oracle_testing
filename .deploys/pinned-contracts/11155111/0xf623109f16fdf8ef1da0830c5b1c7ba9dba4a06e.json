@@ -1,0 +1,58 @@
+{
+  "name": "DataConsumerV3",
+  "address": "0xf623109f16fdf8ef1da0830c5b1c7ba9dba4a06e",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "getChainlinkDataFeedLatestAnswer",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getEthUsdPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "usdAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "usdToEth",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "filePath": "electron/contracts/contract.sol",
+  "pinnedAt": 1764012766217
+}

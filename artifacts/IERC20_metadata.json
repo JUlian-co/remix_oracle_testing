@@ -6,69 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint32",
-						"name": "secondsAgo",
-						"type": "uint32"
-					}
-				],
-				"name": "getTokenPrice",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "token",
+				"name": "decimals",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint8",
 						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "usdAmount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint32",
-						"name": "secondsAgo",
-						"type": "uint32"
-					}
-				],
-				"name": "usdToToken",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "weth",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
+						"type": "uint8"
 					}
 				],
 				"stateMutability": "view",
@@ -88,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/solotest.sol": "PriceOracle"
+			"contracts/solotest.sol": "IERC20"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
