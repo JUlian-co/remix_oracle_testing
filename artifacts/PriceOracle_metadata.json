@@ -8,6 +8,35 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "usdAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint32",
+						"name": "secondsAgo",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint8",
+						"name": "tokenDecimals",
+						"type": "uint8"
+					}
+				],
+				"name": "anotherUsdToToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokensNeeded",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint32",
 						"name": "secondsAgo",
 						"type": "uint32"
@@ -22,6 +51,40 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "usdAmount_6Decimals",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ethPriceInUSD_8Decimals",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenPriceInETH_18Decimals",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "tokenDecimals",
+						"type": "uint8"
+					}
+				],
+				"name": "getTokensForUSD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokensNeeded",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -191,11 +254,11 @@
 			]
 		},
 		"contracts/solotest.sol": {
-			"keccak256": "0x8ae9b798a282caf5eede053f97df6823cc5e183e8c85fbadc5c812b7d1a49b5b",
+			"keccak256": "0x6f54fcc695221eda7fe34e04e523c781a3db7a5db72a2bae83efffb4d756323c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f22b0612930c190820d15516e3e0491ef4c7c2fade65561955f403fb702ba03d",
-				"dweb:/ipfs/QmYGjmANNcXGM6nuDWvKKG9qK6thLRiQbfRG72PY8b8VLh"
+				"bzz-raw://92b277e5cd510e799f8b95c4a82ad572e8b5da9369c9e73dc291849b27f33acf",
+				"dweb:/ipfs/QmSnZLSSNdbxisV3co2CoALmrMHLtJNcPinui6cKXJBNrz"
 			]
 		}
 	},
