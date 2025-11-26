@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.7.6+commit.7338295f"
+		"version": "0.8.30+commit.73712a01"
 	},
 	"language": "Solidity",
 	"output": {
@@ -8,41 +8,17 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "usdAmount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint32",
-						"name": "secondsAgo",
-						"type": "uint32"
-					},
-					{
-						"internalType": "uint8",
-						"name": "tokenDecimals",
-						"type": "uint8"
+						"internalType": "address",
+						"name": "_priceSource",
+						"type": "address"
 					}
 				],
-				"name": "anotherUsdToToken",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "tokensNeeded",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint32",
-						"name": "secondsAgo",
-						"type": "uint32"
-					}
-				],
-				"name": "getTokenPrice",
+				"inputs": [],
+				"name": "getEthUsdPrice",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -56,35 +32,33 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "usdAmount_6Decimals",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "ethPriceInUSD_8Decimals",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "tokenPriceInETH_18Decimals",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint8",
-						"name": "tokenDecimals",
-						"type": "uint8"
+						"internalType": "uint32",
+						"name": "secondsAgo",
+						"type": "uint32"
 					}
 				],
-				"name": "getTokensForUSD",
+				"name": "getMockTokenPrice",
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "tokensNeeded",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "priceSource",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -117,7 +91,7 @@
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "tokensNeeded",
 						"type": "uint256"
 					}
 				],
@@ -151,9 +125,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/solotest.sol": "PriceOracle"
+			"contracts/testnetContract.sol": "PriceOracle"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "prague",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -165,100 +139,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol": {
-			"keccak256": "0xfe6113d518466cd6652c85b111e01f33eb62157f49ae5ed7d5a3947a2044adb1",
-			"license": "GPL-2.0-or-later",
-			"urls": [
-				"bzz-raw://1c42b9e6f5902ac38dd43e25750939baa7e0c1425dc75afd717c4412731065d5",
-				"dweb:/ipfs/QmWaoacnzsucTvBME2o7YgZBZMhaHv7fkj83htHMVWJKWh"
-			]
-		},
-		"@uniswap/v3-core/contracts/interfaces/pool/IUniswapV3PoolActions.sol": {
-			"keccak256": "0x9453dd0e7442188667d01d9b65de3f1e14e9511ff3e303179a15f6fc267f7634",
-			"license": "GPL-2.0-or-later",
-			"urls": [
-				"bzz-raw://982f4328f956c3e60e67501e759eb292ac487f76460c774c50e9ae4fcc92aae5",
-				"dweb:/ipfs/QmRnzEDsaqtd9PJEVcgQi7p5aV5pMSvRUoGZJAdwFUJxgZ"
-			]
-		},
-		"@uniswap/v3-core/contracts/interfaces/pool/IUniswapV3PoolDerivedState.sol": {
-			"keccak256": "0xe603ac5b17ecdee73ba2b27efdf386c257a19c14206e87eee77e2017b742d9e5",
-			"license": "GPL-2.0-or-later",
-			"urls": [
-				"bzz-raw://8febc9bdb399a4d94bb89f5377732652e2400e4a8dee808201ade6848f9004e7",
-				"dweb:/ipfs/QmaKDqYYFU4d2W2iN77aDHptfbFmYZRrMYXHeGpJmM8C1c"
-			]
-		},
-		"@uniswap/v3-core/contracts/interfaces/pool/IUniswapV3PoolEvents.sol": {
-			"keccak256": "0x8071514d0fe5d17d6fbd31c191cdfb703031c24e0ece3621d88ab10e871375cd",
-			"license": "GPL-2.0-or-later",
-			"urls": [
-				"bzz-raw://d0b571930cc7488b1d546a7e9cea7c52d8b3c4e207da657ed0e0db7343b8cd03",
-				"dweb:/ipfs/QmaGK6vVwB95QSTR1XMYvrh7ivYAYZxi3fD7v6VMA4jZ39"
-			]
-		},
-		"@uniswap/v3-core/contracts/interfaces/pool/IUniswapV3PoolImmutables.sol": {
-			"keccak256": "0xf6e5d2cd1139c4c276bdbc8e1d2b256e456c866a91f1b868da265c6d2685c3f7",
-			"license": "GPL-2.0-or-later",
-			"urls": [
-				"bzz-raw://b99c8c9ae8e27ee6559e5866bea82cbc9ffc8247f8d15b7422a4deb287d4d047",
-				"dweb:/ipfs/QmfL8gaqt3ffAnm6nVj5ksuNpLygXuL3xq5VBqrkwC2JJ3"
-			]
-		},
-		"@uniswap/v3-core/contracts/interfaces/pool/IUniswapV3PoolOwnerActions.sol": {
-			"keccak256": "0x759b78a2918af9e99e246dc3af084f654e48ef32bb4e4cb8a966aa3dcaece235",
-			"license": "GPL-2.0-or-later",
-			"urls": [
-				"bzz-raw://64144fb96e1c7fdba87305acadb98a198d26a3d46c097cb3a666e567f6f29735",
-				"dweb:/ipfs/QmUnWVwN9FKB9uV5Pr8YfLpWZnYM2DENnRMaadZ492JS9u"
-			]
-		},
-		"@uniswap/v3-core/contracts/interfaces/pool/IUniswapV3PoolState.sol": {
-			"keccak256": "0x852dc1f5df7dcf7f11e7bb3eed79f0cea72ad4b25f6a9d2c35aafb48925fd49f",
-			"license": "GPL-2.0-or-later",
-			"urls": [
-				"bzz-raw://ed63907c38ff36b0e22bc9ffc53e791ea74f0d4f0e7c257fdfb5aaf8825b1f0f",
-				"dweb:/ipfs/QmSQrckghEjs6HVsA5GVgpNpZWvTXMY5eQLF7cN6deFeEg"
-			]
-		},
-		"@uniswap/v3-core/contracts/libraries/FullMath.sol": {
-			"keccak256": "0x50e87f7a3197525d1c6f7e04290060e848677c8a4e86c554bc6ace4a4d0d476d",
+		"contracts/testnetContract.sol": {
+			"keccak256": "0x2acaebdc2cf7ea11a657b02d2131d1956e83c5808a770105c18b268feb969992",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3874093a6b37d8e68f9475a91f8eb0a1c808cb6153c84cfe6c37909505a4d24e",
-				"dweb:/ipfs/QmUqGpQqvSHX4SwUvcBCs9g4ZhR9JPhgD3615oUigAhtjj"
-			]
-		},
-		"@uniswap/v3-core/contracts/libraries/TickMath.sol": {
-			"keccak256": "0xda8c2c0b12d2976acfd364453ba5f5bf0117ba3c91175ee9e1067d3fb26944d9",
-			"license": "GPL-2.0-or-later",
-			"urls": [
-				"bzz-raw://3f3d2d7c2723c91830c74d96292f28fc1cfe28d388cdb9c1a5ebadb4c2b96f81",
-				"dweb:/ipfs/QmYU4wk8MEm33wVWR38LoncvR7b8PP1mLuGBKX3dUpYJVE"
-			]
-		},
-		"@uniswap/v3-periphery/contracts/libraries/OracleLibrary.sol": {
-			"keccak256": "0xf24785c7c0b8afa39ec0a90d027fefca682ce3540d8448fc0f90075a7e1b92ca",
-			"license": "GPL-2.0-or-later",
-			"urls": [
-				"bzz-raw://eb1ac49b3b9fccad8ab5b0df0ef502d61ce68114d5c45784d0c61b483349cf78",
-				"dweb:/ipfs/QmZky2WujN7H9n2JQWNzTzShcAkG7NGWoJGxTawkd64K4D"
-			]
-		},
-		"@uniswap/v3-periphery/contracts/libraries/PoolAddress.sol": {
-			"keccak256": "0x5edd84eb8ba7c12fd8cb6cffe52e1e9f3f6464514ee5f539c2283826209035a2",
-			"license": "GPL-2.0-or-later",
-			"urls": [
-				"bzz-raw://f375d0e6d5ea3674e1aa6f112b021e9a86721a6a2f3cb22d673378b30cf0e840",
-				"dweb:/ipfs/QmWJir2qnJyp963mU6U3jEEx9i3H3V5BgKawAfSnG1pC8w"
-			]
-		},
-		"contracts/solotest.sol": {
-			"keccak256": "0x6f54fcc695221eda7fe34e04e523c781a3db7a5db72a2bae83efffb4d756323c",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://92b277e5cd510e799f8b95c4a82ad572e8b5da9369c9e73dc291849b27f33acf",
-				"dweb:/ipfs/QmSnZLSSNdbxisV3co2CoALmrMHLtJNcPinui6cKXJBNrz"
+				"bzz-raw://fd92ac0cfef96bd6ee29a22acca87485b5be8b08c2e88c0fb6ae4e9aceaa0173",
+				"dweb:/ipfs/QmcM1haKKM5i93kFXRyV4c88Q9uxgUFRYEY1HfH469uUZ5"
 			]
 		}
 	},

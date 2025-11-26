@@ -7,12 +7,31 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "decimals",
+				"name": "getEthUsdPrice",
 				"outputs": [
 					{
-						"internalType": "uint8",
+						"internalType": "uint256",
 						"name": "",
-						"type": "uint8"
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "secondsAgo",
+						"type": "uint32"
+					}
+				],
+				"name": "getTokenPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -32,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/testnetContract.sol": "IERC20"
+			"contracts/testnetContract.sol": "IMockPrices"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
