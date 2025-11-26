@@ -14,7 +14,6 @@ contract PriceOracle {
     address public priceSource;
     
     address public constant token = 0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238; 
-    address public constant weth = 0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9;  // WETH
 
     constructor(address _priceSource) {
         priceSource = _priceSource;

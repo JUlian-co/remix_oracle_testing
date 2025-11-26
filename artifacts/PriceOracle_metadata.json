@@ -97,19 +97,6 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "weth",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -140,11 +127,11 @@
 	},
 	"sources": {
 		"contracts/testnetContract.sol": {
-			"keccak256": "0x2acaebdc2cf7ea11a657b02d2131d1956e83c5808a770105c18b268feb969992",
+			"keccak256": "0x9b632e68662a56398193c127bfe2a044dc7efe0c34197129c74c4531d489f681",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fd92ac0cfef96bd6ee29a22acca87485b5be8b08c2e88c0fb6ae4e9aceaa0173",
-				"dweb:/ipfs/QmcM1haKKM5i93kFXRyV4c88Q9uxgUFRYEY1HfH469uUZ5"
+				"bzz-raw://59fe13d85f39de38266e498d313b7d5e244be08e546f77247b06ad97ab039c37",
+				"dweb:/ipfs/QmPZBMFZpBhg3AkB7G5zFvS1Z2MsAhEDDeGAa7ojtUCSBb"
 			]
 		}
 	},
