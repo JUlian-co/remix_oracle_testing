@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "MOCK_ETH_USD_PRICE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getEthUsdPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MockOracle.sol": "MockEthUsdPrice"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MockOracle.sol": {
+			"keccak256": "0x39ebfb63a48a80384cf18f24cafabd3e9c0674e6b177d7100b7804d1b5a35c54",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0ebbdf09e4b3ad5cf5d6266165e5136a45764e4c51f703fd13e18520ebaa65f2",
+				"dweb:/ipfs/QmaRzWkN5CGGrxxZCxwAdMnWDxtWGm5Dfqe6S6yCYS51hp"
+			]
+		}
+	},
+	"version": 1
+}
